@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rising Tides: The Story of Sea Level Rise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        #quiz {
+            margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rising Tides</h1>
+        <p>Understanding and combating sea level rise through data.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#game">Quiz</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="dashboard">
+            <h2>Interactive Dashboard</h2>
+            <div id="map"></div>
+            <canvas id="chart" width="400" height="200"></canvas>
+        </section>
+        <section id="education">
+            <h2>Educational Resources</h2>
+            <p>Learn about the science behind sea level rise.</p>
+            <p>Sea level rise is caused by two main factors: melting ice and thermal expansion of water as it warms. Coastal cities are at risk of flooding, which can lead to significant socioeconomic challenges.</p>
+        </section>
+        <section id="game">
+            <h2>Take the Quiz!</h2>
+            <div id="quiz"></div>
+            <button id="submit">Submit Answers</button>
+            <div id="results"></div>
+        </section>
+        <section id="resources">
+            <h2>Further Reading</h2>
+            <ul>
+                <li><a href="https://www.nasa.gov/sea-level" target="_blank">NASA Sea Level Change</a></li>
+                <li><a href="https://www.ipcc.ch/report/ar6/wg1/#FullReport" target="_blank">IPCC AR6 Report</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Rising Tides Project</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([37.7749, -122.4194], 8); // Set initial coordinates (San Francisco)
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        // Sample sea level data
+        const seaLevelData = [0, 0.5, 1, 1.5, 2, 2.5]; // in mm for the years 2010-2015
+        const years = ['2010', '2011', '2012', '2013', '2014', '2015'];
+
+        // Chart.js for visualizations
+        const ctx = document.getElementById('chart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: years,
+                datasets: [{
+                    label: 'Sea Level Rise (mm)',
+                    data: seaLevelData,
+                    borderColor: 'blue',
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Sea Level Rise (mm)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Quiz functionality
+        const quizData = [
+            { question: "What causes sea level rise?", options: ["Melting Ice", "Thermal Expansion", "Both"], answer: "Both" },
+            { question: "Which gas contributes most to global warming?", options: ["Oxygen", "Carbon Dioxide", "Nitrogen"], answer: "Carbon Dioxide" },
+            { question: "What percentage of the world's population lives in coastal areas?", options: ["30%", "50%", "70%"], answer: "50%" },
+        ];
+
+        function createQuiz() {
+            const quizContainer = document.getElementById('quiz');
+            quizData.forEach((q, index) => {
+                const questionElement = document.createElement('div');
+                questionElement.innerHTML = `<p>${index + 1}. ${q.question}</p>`;
+                q.options.forEach(option => {
+                    questionElement.innerHTML += `<input type="radio" name="question${index}" value="${option}">${option}<br>`;
+                });
+                quizContainer.appendChild(questionElement);
+            });
+        }
+
+        document.getElementById('submit').addEventListener('click', function() {
+            let score = 0;
+            quizData.forEach((q, index) => {
+                const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
+                if (selectedOption && selectedOption.value === q.answer) {
+                    score++;
+                }
+            });
+            document.getElementById('results').innerHTML = `Your score: ${score} out of ${quizData.length}`;
+        });
+
+        createQuiz();
+    </script>
+</body>
+</html>
