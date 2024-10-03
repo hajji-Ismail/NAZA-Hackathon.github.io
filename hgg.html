@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rising Tides: The Story of Sea Level Rise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"/>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Rising Tides</h1>
+        <p>Understanding and combating sea level rise through data.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#game">Quiz</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="dashboard">
+            <h2>Interactive Dashboard</h2>
+            <div id="map"></div>
+            <canvas id="chart" width="400" height="200"></canvas>
+        </section>
+        <section id="education">
+            <h2>Educational Resources</h2>
+            <p>Learn about the science behind sea level rise.</p>
+            <p>Sea level rise is caused by two main factors: melting ice and thermal expansion of water as it warms. Coastal cities are at risk of flooding, which can lead to significant socioeconomic challenges.</p>
+        </section>
+        <section id="game">
+            <h2>Take the Quiz!</h2>
+            <div id="quiz"></div>
+            <button id="submit">Submit Answers</button>
+            <div id="results"></div>
+        </section>
+        <section id="resources">
+            <h2>Further Reading</h2>
+            <ul>
+                <li><a href="https://www.nasa.gov/sea-level" target="_blank">NASA Sea Level Change</a></li>
+                <li><a href="https://www.ipcc.ch/report/ar6/wg1/#FullReport" target="_blank">IPCC AR6 Report</a></li>
+            </ul>
+        </section>
+    </main>
+    <div class="carousel">
+        <button><a href="index.html"> << Previouse Page</a></button>
+        <button> <a href="story.html">Next Page >></a></button>
+       </div>
+    <footer>
+        <p>&copy; 2024 Rising Tides Project</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script/script.js"></script>
+    
+</body>
+</html>
