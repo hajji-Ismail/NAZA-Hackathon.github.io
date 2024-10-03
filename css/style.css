@@ -1,182 +1,168 @@
 /* Global Styles */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-image: url("../img/stars.jpg");
-  }
-  
-  h1, h2 {
-    font-weight: bold;
-    color: #00698f;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #00698f;
-  }
-  
-  a:hover {
-    color: #0099cc;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
-  /* Header Styles */
-  
-  header {
-    background-image: url("../img/stars.jpg");
-    padding: 20px;
-    text-align: center;
-    color: #fff;
-  }
-  
-  
-  header img {
-    width: 20%;
-    height: auto;
-    float: left;
-    margin: 10px;
-    border-radius: 50%;
-  }
-  
-  header h1 {
-    margin-left: 25%;
-    display: inline-block;
-  }
-  
-  header nav {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 10px;
-  }
-  
- 
-  
-  
-  nav ul {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-  }
-  
-  nav li {
-    margin-right: 20px;
-  }
-  
-  nav a {
-    color: #fff;
-  }
-  
-  nav a:hover {
-    color: #ccc;
-  }
-  
-  /* Main Styles */
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  section {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  section h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  #co2Chart, #methaneChart {
-    width: 400px;
-    height: 200px;
-    margin: 20px auto;
-  }
-  
-  .get-involved {
-    background-color: #f7f7f7;
-    padding: 20px;
-  }
-  
-  .get-involved ul {
-    padding: 20px;
-  }
-  
-  .get-involved li {
-    margin-bottom: 10px;
-  }
-  
-  /* Carousel Styles */
-  
-  .carousel {
-    background-image: url("../img/stars.jpg");
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    justify-items: center;
-   
-  }
-  
-   
-    
-
-   
-
-  
-  .carousel button {
-    background-color: #00698f;
-    color: #333;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
- 
-  }
-  
-  .carousel button:hover {
-    background-color: #fff;
-    color:#00698f ;
-    a{
-      color: #333;
-  }
-  }
-
-.carousel a{
-    text-decoration: none;
-    color:white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-  /* Footer Styles */
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    clear: both;
-  }
-  
-  footer p {
-    margin-bottom: 10px;
-  }
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-image: url("../img/stars.jpg");
+}
+
+h1, h2 {
+  font-weight: bold;
+  color: #00698f;
+}
+
+a {
+  text-decoration: none;
+  color: #00698f;
+}
+
+a:hover {
+  color: #0099cc;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 2vh;
+}
+
+/* Header Styles */
+
+header {
+  background-image: url("../img/stars.jpg");
+  padding: 4vh;
+  text-align: center;
+  color: #fff;
+}
+
+header img {
+  width: 20vw;
+  height: auto;
+  float: left;
+  margin: 2vh;
+  border-radius: 50%;
+}
+
+header h1 {
+  margin-left: 25vw;
+  display: inline-block;
+}
+
+header nav {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 2vw;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 4vh;
+}
+
+nav li {
+  margin-right: 4vw;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+/* Main Styles */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vh;
+}
+
+section {
+  background-color: #fff;
+  padding: 4vh;
+  margin-bottom: 4vh;
+  box-shadow: 0 0 2vh rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  font-size: 3.5vh;
+  margin-bottom: 2vh;
+}
+
+#co2Chart, #methaneChart {
+  width: 40vw;
+  height: 20vh;
+  margin: 4vh auto;
+}
+
+.get-involved {
+  background-color: #f7f7f7;
+  padding: 4vh;
+}
+
+.get-involved ul {
+  padding: 4vh;
+}
+
+.get-involved li {
+  margin-bottom: 2vh;
+}
+
+/* Carousel Styles */
+
+.carousel {
+  background-image: url("../img/stars.jpg");
+  padding: 4vh;
+  text-align: center;
+  margin-bottom: 4vh;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.carousel button {
+  background-color: #00698f;
+  color: #333;
+  border: none;
+  padding: 2vh 4vw;
+  font-size: 3.5vh;
+}
+
+.carousel button:hover {
+  background-color: #fff;
+  color: #00698f;
+}
+
+.carousel a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Footer Styles */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2vh;
+  text-align: center;
+  clear: both;
+}
+
+footer p {
+  margin-bottom: 2vh;
+}
