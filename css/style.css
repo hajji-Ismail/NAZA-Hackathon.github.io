@@ -148,18 +148,25 @@ section h2 {
   padding: 2vh 4vw;
   font-size: 3.5vh;
  
+ 
 }
-
-.carousel button:hover {
-  background-color: #fff;
-  color: #00698f;
-  
-}
-
 .carousel a {
   text-decoration: none;
   color: #fff;
 }
+
+
+.carousel button:hover {
+  background-color: #fff;
+  color: #00698f;
+  a {
+    color: #333;
+  }
+}
+  
+
+
+
 video {
   width: 40vw; 
   height: 40vh; 
