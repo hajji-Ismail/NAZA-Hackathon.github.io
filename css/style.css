@@ -96,8 +96,9 @@ section {
   background-color: #fff;
   padding: 4vh;
   margin-bottom: 4vh;
-  box-shadow: 0 0 2vh rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2vh rgb(4, 213, 250);
 }
+
 
 section h2 {
   font-size: 3.5vh;
@@ -108,6 +109,11 @@ section h2 {
   width: 40vw;
   height: 20vh;
   margin: 4vh auto;
+}
+#map {
+  height: 50vh;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .get-involved {
@@ -141,18 +147,27 @@ section h2 {
   border: none;
   padding: 2vh 4vw;
   font-size: 3.5vh;
+ 
 }
 
 .carousel button:hover {
   background-color: #fff;
   color: #00698f;
+  
 }
 
 .carousel a {
   text-decoration: none;
   color: #fff;
 }
+video {
+  width: 40vw; 
+  height: 40vh; 
+  margin: 10vh auto ; 
 
+  border-radius: 1vh;  
+  box-shadow: 0 0 2vh rgb(4, 213, 250);
+}
 /* Footer Styles */
 
 footer {
