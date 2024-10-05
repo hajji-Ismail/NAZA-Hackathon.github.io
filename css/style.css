@@ -10,7 +10,10 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-image: url("../img/stars.jpg");
+  background-image: url("../video/moving.gif");
+   
+
+
 }
 
 h1, h2 {
@@ -40,7 +43,9 @@ li {
 /* Header Styles */
 
 header {
-  background-image: url("../img/stars.jpg");
+  /* replace with your GIF file path */
+  background-size: cover; /* scale the GIF to cover the entire background */
+  background-repeat: no-repeat;
   padding: 4vh;
   text-align: center;
   color: #fff;
@@ -90,13 +95,20 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 4vh;
+  display: flex; /* enable flexbox layout */
+  justify-content: center; /* center flex items horizontally */
+  align-items: center; /* center flex items vertically */
+  justify-items: center; 
+ 
 }
 
 section {
-  background-color: #fff;
+  background-color: #333;
+  color: #fff;
   padding: 4vh;
   margin-bottom: 4vh;
   box-shadow: 0 0 2vh rgb(4, 213, 250);
+
 }
 
 
@@ -117,17 +129,21 @@ section h2 {
 }
 
 .get-involved {
-  background-color: #f7f7f7;
+  background-color:#333;
   padding: 4vh;
+  background-color: #333;
+  color: #fff;
 }
 
 .get-involved ul {
   padding: 4vh;
+  color: #fff;
 }
 
 .get-involved li {
   margin-bottom: 2vh;
 }
+
 
 /* Carousel Styles */
 
@@ -140,7 +156,9 @@ section h2 {
   justify-content: space-between;
   justify-items: center;
 }
-
+.carousel h1{
+  color: #000;
+}
 .carousel button {
   background-color: #00698f;
   color: #333;
@@ -150,6 +168,8 @@ section h2 {
  
  
 }
+
+
 .carousel a {
   text-decoration: none;
   color: #fff;
@@ -163,7 +183,19 @@ section h2 {
     color: #333;
   }
 }
-  
+.education {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.education .text {
+  grid-column: 1;
+}
+
+.education .graph {
+  grid-column: 2;
+}
 
 
 
@@ -184,7 +216,12 @@ footer {
   text-align: center;
   clear: both;
 }
+#NextPage{
 
+    float: right;
+    margin-right: 20px; /* adjust the margin to your liking */
+  
+}
 footer p {
   margin-bottom: 2vh;
 }

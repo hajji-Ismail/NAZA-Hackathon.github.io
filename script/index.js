@@ -10,6 +10,7 @@ const co2Data = {
     }]
 };
 
+
 const co2ChartConfig = {
     type: 'line',
     data: co2Data,
